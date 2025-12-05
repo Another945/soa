@@ -1,0 +1,239 @@
+/* ==========================================================================
+   ESTILOS GENERALES Y SIDEBAR
+   ========================================================================== */
+body {
+    min-height: 100vh;
+    background-color: #f8f9fa; /* Fondo general claro para el admin */
+}
+
+.sidebar {
+    width: 280px;
+    min-height: 100vh;
+}
+
+.sidebar .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    transition: background-color 0.2s, color 0.2s;
+    border-radius: 0.375rem;
+    margin-bottom: 0.25rem;
+}
+
+.sidebar .nav-link.active {
+    background-color: #ffc107;
+    color: #212529;
+    font-weight: 500;
+}
+
+.sidebar .nav-link:not(.active):hover {
+    background-color: #343a40;
+    color: #ffc107;
+}
+
+.sidebar-brand-icon {
+    color: #ffc107;
+    font-size: 2rem;
+    transform: rotate(-15deg);
+}
+
+.sidebar-brand-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   TARJETAS DE ESTADÍSTICAS (DASHBOARD)
+   ========================================================================== */
+.stat-card {
+    border-left: 5px solid #ffc107;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    background-color: #fff;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.stat-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.stat-card .card-title {
+    color: #6c757d;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.stat-card .card-text {
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+.stat-card .icon {
+    font-size: 3rem;
+    color: #e9ecef;
+}
+
+/* ==========================================================================
+   ESTILOS DE TABLAS (NUEVO FORMATO PROFESIONAL)
+   ========================================================================== */
+.table-responsive {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+    background-color: #fff;
+}
+
+.table {
+    margin-bottom: 0;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+/* Encabezado Oscuro con Acento Amarillo */
+.table thead th {
+    background-color: #212529; /* Fondo oscuro */
+    color: #ffc107; /* Texto amarillo */
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    padding: 1rem;
+    border-bottom: 4px solid #ffc107; /* Línea amarilla divisoria */
+    vertical-align: middle;
+    border-top: none;
+}
+
+/* Cuerpo de la Tabla */
+.table tbody td {
+    padding: 1rem;
+    vertical-align: middle;
+    color: #495057;
+    border-bottom: 1px solid #e3e6f0;
+    font-size: 0.95rem;
+}
+
+/* Efecto Hover */
+.table-hover tbody tr:hover {
+    background-color: rgba(255, 193, 7, 0.1) !important; /* Fondo amarillo muy suave */
+    color: #212529;
+}
+
+/* Alineación */
+.table td.text-end, .table th.text-end { text-align: right; }
+.table td.text-center, .table th.text-center { text-align: center; }
+
+/* Badges dentro de la tabla */
+.table .badge {
+    font-size: 0.8rem;
+    padding: 0.5em 0.8em;
+}
+
+/* ==========================================================================
+   ESTILOS PARA FULLCALENDAR (ADMIN) - MEJORADO
+   ========================================================================== */
+#calendario-admin {
+    --fc-border-color: #dee2e6;
+    --fc-neutral-bg-color: rgba(0, 0, 0, 0.02);
+    --fc-today-bg-color: rgba(255, 193, 7, 0.15); /* Amarillo suave para hoy */
+    --fc-now-indicator-color: #ffc107;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    min-height: 650px; /* Altura mínima asegurada */
+}
+
+#calendario-admin .fc-toolbar-title {
+    color: #343a40;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#calendario-admin .fc-button {
+    background-color: #f8f9fa;
+    color: #343a40;
+    border: 1px solid #dee2e6;
+    box-shadow: none !important;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+#calendario-admin .fc-button:hover {
+    background-color: #e9ecef;
+    border-color: #ced4da;
+}
+
+#calendario-admin .fc-button-primary:not(:disabled).fc-button-active {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #212529;
+}
+
+#calendario-admin .fc-event {
+    border: none;
+    font-weight: 500;
+    padding: 2px 4px;
+    font-size: 0.85rem;
+    cursor: pointer; /* Cursor de mano para indicar que es clickeable */
+}
+
+/* Solución para el fondo gris en días no laborables o pasados */
+#calendario-admin .fc-day-other,
+#calendario-admin .fc-day-sun,
+#calendario-admin .fc-day-sat {
+    background-color: transparent !important;
+}
+
+/* Leyenda */
+#calendar-legend .legend-item {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+    background: #fff;
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #495057;
+}
+#calendario-admin .fc-timegrid-slot {
+    height: 4em !important; 
+}
+#calendar-legend .legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+    display: inline-block;
+}
+.table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+/* Anchos específicos para columnas clave (Ajusta según necesites) */
+.table th:nth-child(1) { width: 80px; }  /* Imagen */
+.table th:nth-child(2) { width: 15%; }   /* Nombre */
+.table th:nth-child(3) { width: 35%; }   /* Descripción (La más ancha) */
+.table th:nth-child(4) { width: 100px; } /* Precio */
+.table th:nth-child(5) { width: 80px; }  /* Stock */
+.table th:nth-child(6) { width: 160px; } /* Acciones */
+
+/* Truncar texto largo con puntos suspensivos (...) */
+.table td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 0; /* Necesario para que el truncado funcione en tablas */
+}
+
+/* Excepción: La columna de Acciones no debe cortar su contenido */
+.table td:last-child {
+    white-space: normal;
+    overflow: visible;
+}

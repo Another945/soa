@@ -1,0 +1,42 @@
+body {
+    background: linear-gradient(135deg, rgba(0,0,0,0.95), rgba(30,30,30,0.95)),
+                url('../img/fondo-barberia.png') center/cover no-repeat fixed;
+    color: #f8f8f8;
+    font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+    color: #d4af37;
+    letter-spacing: 1px;
+}
+
+.table-dark {
+    background-color: #2b2b2b;
+}
+
+.table thead {
+    background-color: #d4af37 !important;
+    color: #000;
+}
+
+.btn-warning {
+    background-color: #d4af37;
+    border: none;
+    color: #000;
+}
+.btn-warning:hover {
+    background-color: #b89228;
+}
+
+.btn-danger {
+    background-color: #cc3333;
+    border: none;
+}
+.btn-danger:hover {
+    background-color: #a32121;
+}
+
+.card {
+    border: 1px solid #d4af37;
+    border-radius: 12px;
+}
